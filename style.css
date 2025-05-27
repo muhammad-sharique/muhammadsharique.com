@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+:root {
+    --primary-color: #6f42c1;
+    --primary-color-dark: #5a32a3;
+    --text-color: #2c3e50;
+    --light-bg: #f8f9fa;
+
+ 	--bs-primary: var(--primary-color) !important;
+    --bs-primary-rgb: 111, 66, 193;
+    
+    /* Form control focus state */
+    --bs-focus-ring-color: rgba(111, 66, 193, 0.25);
+    --bs-focus-ring-width: 0.25rem;
+
+}
+/* This is needed because Bootstrap uses both variables and direct classes */
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-bg: #5a32a3;
+    --bs-btn-hover-border-color: #5a32a3;
+    --bs-btn-active-bg: #5a32a3;
+    --bs-btn-active-border-color: #5a32a3;
+}
+body {
+   font-family: 'Outfit', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+/* Hero section */
+.hero-section {
+    /* padding: 8rem 0; */
+    background-color: var(--light-bg);
+}
+
+.min-vh-80 {
+    min-height: 80vh;
+}
+
+.hero-section .hero-title { 
+    color: var(--primary-color);
+    font-size: 4rem;
+}
+.hero-section .greeting {
+	
+	font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+.hero-section .name {
+	font-family: "Satisfy", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+@media screen and (max-width: 320px) {
+	.hero-section .greeting{
+		font-size: 2rem;
+	}
+	.hero-section .name{
+		font-size: 2.5rem;
+	}
+}
+.hero-section .lead {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+.hero-section .hero-links{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hero-section .hero-links a{
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	text-decoration: underline dotted !important;
+	text-underline-offset: 4px !important;
+	width: 125px;
+}
+.hero-section .hero-links a:nth-child(1) {
+	justify-content: flex-end;
+}
+.hero-section .hero-links a:nth-child(2) {
+	justify-content: flex-start;
+}
+.hero-section .social-links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+}
+.hero-section .social-links a{ 
+	font-size: 24px;
+	text-decoration: none;
+	color: var(--primary-color);
+	transition: color 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	/* width: 125px; */
+}
+.hero-section .social-links a:nth-child(1) {
+	justify-content: flex-end;
+}
+.hero-section .social-links a:nth-child(2) {
+	justify-content: flex-start;
+}
+.hero-section .social-links svg{
+	width: 24px;
+	height: 24px;
+	fill: var(--primary-color);
+	position: relative;
+	bottom: 3px;
+}
+/* Section styles */
+section {
+    padding: 5rem 0;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Card styles */
+#work .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    height: 100%;
+}
+
+#work .card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(111, 66, 193, 0.1);
+}
+#work .card a{
+	text-decoration: underline dotted !important;
+	text-underline-offset: 4px !important;
+	color: var(--primary-color);
+}
+#work .card a:hover {
+	color: var(--primary-color-dark);
+	text-decoration: underline solid !important;
+}
+#work .card-title {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Social links */
+#contact .social-link a, #contact .email-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+	font-size: 24px;
+}
+#contact .social-link a svg, #contact .email-link a svg{
+	width: 24px;
+	height: 24px;
+	fill: var(--primary-color);
+	position: relative;
+	bottom: 3px;
+}
+
+#contact .social-link a:hover, #contact .email-link a:hover {
+    color: var(--primary-color-dark);
+}
+#contact .email-link a {
+	font-size: 20px;
+	text-decoration: underline dotted !important;
+	text-underline-offset: 4px !important;
+}
+#contact .email-link a svg {
+	bottom: 1px;
+	height: 20px;
+	width: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* Form control focus styles */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25);
+}
+
+.form-control:focus-visible {
+    outline: none;
+}
+
+textarea.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(111, 66, 193, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .lead {
+        font-size: 1.25rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+}
