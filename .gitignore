@@ -133,4 +133,13 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .yarn/install-state.gz
-.pnp.*.gitignore
+.pnp.*
+
+tasks.json
+spellright.dict
+settings.json
+launch.json
+extensions.json
+temp_auto_push.bat
+ 
+temp_interactive_push.bat
